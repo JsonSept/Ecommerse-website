@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* index--------------------------------------------------------------------------- */
+.index {
+    box-shadow: 0 0 3rem 0 rgba(1, 0, 0, 1);
+    color:white;
+    text-align: center;
+    margin-top: 15%;
+    font-size: 150px
+}
+/* -------------------------------------------------------------------------------- */
+
+
+/* --------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* --------------------------------------------------------------------------- */
+
+.body1 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+}
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    
+}
+
+.about {
+    width: 40%;
+    box-shadow: 0 0 4rem 0 rgba(1, 0, 0.5, 1);
+    text-align: center;
+    margin-left: 33%;
+    color: black;
+}
+
+.btn {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+footer {
+    width: 100%;
+    background-color: black;
+    height: 5%;
+    color: white;
+    bottom: 0;
+    position:fixed;
+    margin-bottom: 0;
+    text-align: center;
+}
