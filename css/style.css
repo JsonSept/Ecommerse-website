@@ -4,75 +4,57 @@
 }
 /* index--------------------------------------------------------------------------- */
 .index {
- home
-    background-color: darkslategray;
-   
-
- main
+ 
+    background-color: white;
     box-shadow: 0 0 3rem 0 rgba(1, 0, 0, 1);
-    color:white;
+
     text-align: center;
-    margin-top: 15%;
- home
+    margin-top: 6%;
     font-size: 150px;
-    margin-left:22%;
+    margin-left:24%;
     width: 50%;
+    opacity: 0.5;
   }
 
-
-    font-size: 150px
+  .body1 {
+    background:rgba(0, 0, 0, 0.5) url('https://i.ibb.co/RC505m7/Blue-eyes.jpg');
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-size: cover;   
 }
-main
-/* -------------------------------------------------------------------------------- */
 
+/*About -------------------------------------------------------------------------------- */
 
+.bodyAbt {
+    background:rgba(0, 0, 0, 0.8) url("https://i.postimg.cc/KzTy373d/BEWD.jpg");
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about {
+
+    width: 70%;
+    box-shadow: 0 0 4rem 0 rgba(1, 0, 0.5, 1);
+    text-align: center;
+    margin-left: 15%;
+    color: black;
+}
 /* --------------------------------------------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 /* --------------------------------------------------------------------------- */
 
-.body1 {
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-    
-}
- home
- image {
-    backdrop-filter: 0.3%;
- }
-body {
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.about {
-    background-color: darkgray;
 
 
-body {
-    background-repeat: no-repeat;
-    background-size: cover;
 
-    
-}
-
-.about {
- main
-    width: 40%;
-    box-shadow: 0 0 4rem 0 rgba(1, 0, 0.5, 1);
-    text-align: center;
-    margin-left: 33%;
-    color: black;
-}
 
 .btn {
     margin-top: 20px;
     margin-left: 20px;
- home
+
 } 
 
-}
- main
+
 footer {
     width: 100%;
     background-color: black;
