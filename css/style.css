@@ -4,17 +4,25 @@
 }
 /* index--------------------------------------------------------------------------- */
 .index {
+ home
     background-color: darkslategray;
    
+
+ main
     box-shadow: 0 0 3rem 0 rgba(1, 0, 0, 1);
     color:white;
     text-align: center;
     margin-top: 15%;
+ home
     font-size: 150px;
     margin-left:22%;
     width: 50%;
   }
 
+
+    font-size: 150px
+}
+main
 /* -------------------------------------------------------------------------------- */
 
 
@@ -28,6 +36,7 @@
     
     
 }
+ home
  image {
     backdrop-filter: 0.3%;
  }
@@ -38,6 +47,17 @@ body {
 
 .about {
     background-color: darkgray;
+
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    
+}
+
+.about {
+ main
     width: 40%;
     box-shadow: 0 0 4rem 0 rgba(1, 0, 0.5, 1);
     text-align: center;
@@ -48,7 +68,11 @@ body {
 .btn {
     margin-top: 20px;
     margin-left: 20px;
+ home
 } 
+
+}
+ main
 footer {
     width: 100%;
     background-color: black;
