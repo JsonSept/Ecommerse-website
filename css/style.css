@@ -96,9 +96,6 @@ footer {
       width: 290px;
       padding: 4px;
     }
-    form ,button {
-      
-    }
     
     @media screen and (max-width: 300px) {
       form {
@@ -113,4 +110,43 @@ footer {
     }
     }
     
-    
+    /* <---------------------------------------------------------------------------------------------------------------------------------> */
+/* Admin */
+
+.col-6 {
+    display: flex;
+    margin: 30PX;
+    border: 3PX;
+}
+/*/-------------------------------------------------------------------------------------------------------------------------------------------> */
+.card{
+    height: 95vh;
+    box-shadow: 0 4px 8px 0 black;
+    transition: 0.3s;
+    margin-top: 25px;
+    opacity: 0.9px;
+    width: 10%;
+    display: flex;
+}
+.card:hover{
+    box-shadow: 0 8px 16px 0 black;
+}
+.card img{
+    align-self: center;
+    width: 200px;
+    height: 250px;
+    margin-top: 5px;
+}
+.container{
+    width: 100%;
+    padding: 2px 16px;
+}
+.card, .container, button{
+    margin-top: 40px;
+}
+
+
+
+
+
+
