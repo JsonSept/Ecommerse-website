@@ -16,14 +16,12 @@ let item5 = new Constructor('https://i.postimg.cc/tR5b7Qgd/yugioh1.jpg', 5, 'car
 
 productPage.push(item1, item2, item3, item4, item5);
 let set = document.getElementById('productList');
-localStorage.setItem("productPage", JSON.stringify(productPage));
+let product = JSON.parse(localStorage.getItem(''));
 
-// Retrieve items from local storage
-let product = JSON.parse(localStorage.getItem('productPage'));
-
-function upload(items) {
-    let productItems = items.map(function (item, index) {
+function upload(product) {
+    let productItems = productPage.map(function (item, index) {
         return `
+       
             <div class='card col-6'>
                 <div><img src=${item.url}></div>
                 <div class='container'>
@@ -31,9 +29,11 @@ function upload(items) {
                     <h1>${item.name}</h1>
                     <h3>R${item.price}</h3>
                     <h5>${item.description}</h5>
-                    <button value='${index}' data-add>Add To Cart</button>
+                    <button id="cart-btn" value='${index}' data-add>Add To Cart</button>
+                    
                 </div>
             </div>`;
+
     });
 
     set.innerHTML = productItems.join('');
@@ -54,12 +54,46 @@ sortButton.addEventListener('click', sortItems);
 function search() {
     let inputValue = document.getElementById('filterInput').value.toLowerCase();
 
+    
     if (inputValue.trim() === "") {
+        alert('Item not found');
+        
         upload(productPage);
+        
     } else {
+       
         let filteredItems = productPage.filter(item => item.name.toLowerCase().includes(inputValue));
         upload(filteredItems);
     }
 }
+
 let searchBtn = document.querySelector(".search");
 searchBtn.addEventListener('click', search)
+
+
+
+let main = document.querySelector('main')
+
+main.addEventListener('click' , function(){
+    if(event.target.hasAttribute('data-add')){
+        add(event.target.value)
+      
+    }
+})
+
+
+let button = document.getElementById("cart-btn");
+let cart = document.getElementById('cart')
+        let i = 1;
+        button.addEventListener("click", () => {
+        
+            cart.innerText = i++;
+        })
+        
+function add(index) {
+    productPage.push(product[index])
+    localStorage.setItem('purchased' , JSON.stringify(purchased))
+}
+// --------------------------------------------------------------------
+
+        

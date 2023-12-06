@@ -2,7 +2,7 @@ let h1 = document.querySelector('h1')
 h1.innerText = "Admin Page"
 
 //empty array to store our items/products
-let yugiohItem = []
+let productPage = []
 //-------------------------------------------------------------------------------------------------------------------
 //constructor function to create my objects
 function Constructor(url,id,name,description,price){
@@ -22,47 +22,54 @@ let item5 = new Constructor('https://i.postimg.cc/tR5b7Qgd/yugioh1.jpg',5, 'YuGi
 
 //--------------------------------------------------------------------------------------------------------------------
 //Pushing items into array
-yugiohItem.push(item1,item2,item3,item4,item5)
+productPage.push(item1,item2,item3,item4,item5)
 
     //sets the array in local storage
 //items is the name of the array
 //JSON.stringify turns objects into a string to be able to view in the console
-localStorage.setItem("yugiohItem",JSON.stringify(yugiohItem))
+localStorage.setItem("productPage",JSON.stringify(productPage))
 
 //getItem gets the item from the browser
 //sets the array from local storage to array(items) in code
-product = JSON.parse(localStorage.getItem('yugiohItem')) 
+product = JSON.parse(localStorage.getItem('productPage')) 
 let set = document.querySelector('h1')
 
 let deleteButton = document.querySelector('.delete')
 
 //---------------------------------------------------------------------------------------------------------------------
-function remove(position ){
+function remove(position){
     // alert('button clicked')
-    yugiohItem.splice(position,1)
+    product = JSON.parse(localStorage.getItem('productPage')) 
+    localStorage.setItem("productPage",JSON.stringify(productPage))
+    productPage.splice(position,1)
     storage()
     upload()
 }
-
 //--------------------------------------------------------------------------------------------------------------------
 
 //the window.onload() is an event handler , not an event listener
 //You must figure out the event listener on your own
 function upload(){
-let productItems = yugiohItem.map(function(item,index){
+let productItems = productPage.map(function(item,index){
     console.log(item);
-    // console.log(index);
-    return `
-        <div class='col-6';
-        <div><img src='${item.url}'</div>
-            <h3>${item.id}</h3>
-            <h1>${item.name}</h1>
-            <h3>R${item.price}</h3>
-            <h5>${item.description}</h5>
-            <div><button class='delete'>Edit</button></div>
-            <div><button class='delete' value=${index}>Delete</button></div>
+    
+   return `
+    <div class='row col-6'>
+  <table>
+    <tr>
+      <td><img src='${item.url}' alt='${item.name}'></td>
+      <td>${item.id}</td>
+      <td>${item.name}</td>
+      <td>R${item.price}</td>
+      <td>${item.description}</td>
+      <td><button class='edit'>Edit</button></td>
+      <td><button class='delete' value='${index}'>Delete</button></td>
+    </tr>
+  </table>
+</div>
 
-        </div>`
+    `
+   
 })
 
 set.innerHTML = productItems.join('')
@@ -75,12 +82,12 @@ function storage(){
     //sets the array in local storage
 //items is the name of the array
 //JSON.stringify turns objects into a string to be able to view in the console
-localStorage.setItem("yugiohItem",JSON.stringify(yugiohItem))
+localStorage.setItem("productPage",JSON.stringify(productPage))
 
 //getItem gets the item from the browser
 //sets the array from local storage to array(items) in code
-itemStorage = JSON.parse(localStorage.getItem('yugiohItem')) 
-
+itemStorage = JSON.parse(localStorage.getItem('productPage')) 
+// remove()
 }
 
 
@@ -91,3 +98,12 @@ set.addEventListener('click',function(){
         // alert(event.target.value)
     }
 })
+
+// function load(){
+//     let spinner = document.getElementById('productList');
+//     spinner.innerHTML.display = 
+//     <div class="spinner-border m-5" role="status">
+//     <span class="visually-hidden">Loading...</span>
+//   </div>
+    
+// }
