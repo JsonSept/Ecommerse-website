@@ -21,19 +21,28 @@ let product = JSON.parse(localStorage.getItem(''));
 function upload(product) {
     let productItems = productPage.map(function (item, index) {
         return `
-       
-            <div class='card col-6'>
-                <div><img src=${item.url}></div>
-                <div class='container'>
-                    <h3>${item.id}</h3>
-                    <h1>${item.name}</h1>
-                    <h3>R${item.price}</h3>
-                    <h5>${item.description}</h5>
-                    <button id="cart-btn" value='${index}' data-add>Add To Cart</button>
-                    
-                </div>
-            </div>`;
+            <table>
+                <tr>
+                <td><img src=${item.url}></td>
+                
+                    <td>${item.id}</td><br>
+                    <td>${item.name}</td><br>
+                    <td>R${item.price}</td><br>
+                    <td>${item.description}</td><br>
+                    <td><button id="cart-btn" value='${index}' data-add>Add To Cart</button></td> 
+            </tr>
+            </table>
+            `;
 
+
+    //         <tr>
+    //     <td>${index+1}</td>
+    //     <td>${item.name}</td>
+    //     <td>${item.name}</td>
+    //     <td>${item.description}</td>
+    //     <td>R${item.price}</td>
+    //     <td><button>X</button></td>
+    // </tr>
     });
 
     set.innerHTML = productItems.join('');

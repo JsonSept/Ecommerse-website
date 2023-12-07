@@ -43,7 +43,14 @@
 /* --------------------------------------------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 /* --------------------------------------------------------------------------- */
-
+#productId {
+    background:fixed rgba(0, 0, 0, 0.8) url("https://i.postimg.cc/FFB0Y4KB/reddragon.jpg");
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-size:cover;
+    
+    
+}
 
 
 
@@ -112,6 +119,13 @@ footer {
     
     /* <---------------------------------------------------------------------------------------------------------------------------------> */
 /* Admin */
+
+#adminId {
+    background:fixed rgba(0, 0, 0, 0.8) url("https://i.postimg.cc/hvTTd2M5/bgyugi.jpg");
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
 
 .col-6 {
     display: flex;

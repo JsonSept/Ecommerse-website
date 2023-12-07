@@ -54,22 +54,21 @@ let productItems = productPage.map(function(item,index){
     console.log(item);
     
    return `
-    <div class='row col-6'>
   <table>
     <tr>
       <td><img src='${item.url}' alt='${item.name}'></td>
-      <td>${item.id}</td>
-      <td>${item.name}</td>
-      <td>R${item.price}</td>
-      <td>${item.description}</td>
+      <td>${item.id}</td><br>
+                    <td>${item.name}</td><br>
+                    <td>R${item.price}</td><br>
+                    <td>${item.description}</td><br>
       <td><button class='edit'>Edit</button></td>
       <td><button class='delete' value='${index}'>Delete</button></td>
     </tr>
   </table>
-</div>
+
 
     `
-   
+            
 })
 
 set.innerHTML = productItems.join('')
